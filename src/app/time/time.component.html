@@ -1,0 +1,13 @@
+
+<div>
+<h5>{{align}} align {{layout}} layout</h5>
+	<p-timeline [value]="events1" [align]="align" [layout]="layout">
+		<ng-template pTemplate="content" let-event>
+			&#123;&#123;event.status&#125;&#125;
+		</ng-template>
+	</p-timeline>
+</div>
+<button pButton type="button"(click)="sendData()">click data</button>
+<input type="text" pInputText #newdetail />
+<button pButton type="button"(click)="addNewdetails(newdetail.value)">ADD</button>
+
